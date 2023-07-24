@@ -8,20 +8,18 @@
     "node": "^16"
   },
   "dependencies": {
-    "@sap/cds": "^6.8",
-    "@sap/audit-logging": "^5",
-    "hdb": "^0.19",
-
     "@sap-cloud-sdk/http-client": "^2.5",
-    "@sap/xsenv": "^3",
-    "@sap/xssec": "^3",
-    "passport": "^0.4.1",
+    "@sap/audit-logging": "^5",
+    "@sap/cds": "^6.8",
     "@sap/cds-mtxs": "^1.1",
+    "@sap/xsenv": "^3.4.0",
+    "@sap/xssec": "^3",
     "cfenv": "^1",
-
-    "sap-hdbext-promisfied": "^2",
     "debug": "^4.3",
-    "express": "^4"
+    "express": "^4",
+    "hdb": "^0.19",
+    "passport": "^0.4.1",
+    "sap-hdbext-promisfied": "^2"
   },
   "devDependencies": {
     "@sap/ux-specification": "^1.96.4"
@@ -72,42 +70,37 @@
             "joe": {
               "roles": [
                 "Admin",
-                "Viewer"
-                ,
+                "Viewer",
                 "internal-user"
-              ]
-              ,
+              ],
               "tenant": "t1"
             },
             "julie": {
               "roles": [
                 "Viewer"
-              ]
-              ,
+              ],
               "tenant": "t2"
             },
             "bob": {
               "roles": [
                 "Viewer"
-              ]
-              ,
+              ],
               "tenant": "t3"
             }
           }
         }
-      }
-      ,
+      },
       "db": {
         "[production]": {
-          "kind": "hana-mt"
-          ,"model": [
+          "kind": "hana-mt",
+          "model": [
             "db/data-config",
             "db/data-test"
           ]
         },
         "[development]": {
-          "kind": "sql-mt"
-          ,"model": [
+          "kind": "sql-mt",
+          "model": [
             "db/data-config",
             "db/data-test"
           ]
@@ -115,17 +108,14 @@
         "model": [
           "db",
           "srv"
-        ]
-        ,
+        ],
         "vcap": {
           "label": "service-manager"
         }
-      }
-      ,
+      },
       "multitenancy": true,
       "toggles": false,
-      "extensibility": false
-      ,
+      "extensibility": false,
       "NearEarthObjectWebService": {
         "kind": "rest",
         "impl": "srv/external/NearEarthObjectWebService.js",
