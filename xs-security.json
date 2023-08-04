@@ -1,5 +1,5 @@
 {
-    "xsappname": "projectSaas-app",
+    "xsappname": "projectSaas",
     "tenant-mode": "shared",
     "scopes": [
         {
