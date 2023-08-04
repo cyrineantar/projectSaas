@@ -1,5 +1,5 @@
 _schema-version: '3.2'
-ID: projectSaas-app
+ID: projectSaas
 version: 0.0.2
 
 parameters:
@@ -176,7 +176,7 @@ resources:
       service-plan: application
       service-name: projectSaas-registry
       config:
-        xsappname: projectSaas
+        xsappname: projectSaas-app
         appName: projectSaas
         displayName: 'App'
         description: 'Business Application'
